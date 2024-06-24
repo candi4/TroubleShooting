@@ -1,5 +1,7 @@
 # TroubleShooting
 TroubleShooting the errors I encountered
 
-## TroubleShooting/GitHub
+## Contents
+
+### TroubleShooting/GitHub
 Troubleshooting issues related to Git and GitHub.
