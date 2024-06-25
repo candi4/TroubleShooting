@@ -15,7 +15,23 @@ Issues with conda
     ```
     You can set a preferred directory.   
     Enter yes for this: `Do you wish to update your shell profile to automatically initialize conda?`
-5. 
+5. Add a line into `bashrc` to use anaconda prompt.
+    ```
+    sudo gedit ~/.bashrc
+    ```
+    Add a line: `export PATH=~/anaconda3/bin:~/anaconda3/condabin:$PATH`
+    ```
+    source ~/.bashrc
+    ```
+6. check if the conda installation was successful.
+    ```
+    conda -V
+    ```
+7. (Optional) To prevent the terminal from defaulting to the Anaconda prompt upon launch:
+    ```
+    conda config --set auto_activate_base False
+    ```
+    Use `conda activate` and `conda deactivate` to launch and deactivate anaconda prompt in the future.
 
 Reference: [[우분투/Ubuntu 20.04] 우분투에 아나콘다 설치 / Install Anaconda on Ubuntu](https://ieworld.tistory.com/12)    
 
