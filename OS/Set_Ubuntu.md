@@ -20,10 +20,11 @@ Settings ➔ Power ➔ Black screen ➔ Never
 
 
 ## Additional Install
-### terminator
+### Terminator
 ```
 sudo apt install terminator
 ```
 [Show only one instance of Terminator in the favorite dock](https://askubuntu.com/questions/1242536/ubuntu-dock-adds-a-new-icon-when-i-open-certain-programs)
+
 ### Etc
 chrome, vscode

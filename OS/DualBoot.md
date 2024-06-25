@@ -12,7 +12,7 @@ The reason to install Windows first: partition management is easier in Windows t
 Create a Windows bootable USB and an Ubuntu bootable USB.
 
 ### Install Windows
-1. Uncheck `Turn on fast startup`
+1. Uncheck `Turn on fast startup`. (For BIOS)
    * 제어판 > 모든 제어판 항목 > 전원 옵션 > 시스템 설정 > 현재 사용할 수 없는 설정 변경 > 빠른 시작 켜기 체크해제
 2. Connect the Windows bootable USB, boot the system, and access the BIOS by repeatedly pressing DEL, F2, or the appropriate key.
 3. In the Boot menu, move the USB containing the OS to the top of the list. (You can use either the +/- keys or the ↑↓ keys.)
@@ -22,11 +22,13 @@ Create a Windows bootable USB and an Ubuntu bootable USB.
    * “이 PC에서는 Windows 11을 실행할 수 없음” 오류:    
      레지스트리 편집창에서 키값 추가.    
      HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig BypassSecureBootCheck, BypassTPMCheck, BypassSecureRAMCheck, BypassSecureStorageCheck, BypassSecureCPUCheck.
-7. 기존 데이터 유지하지 않는 옵션 설정하면 파티션 정해야 함. 파티션 다 지우고 새로 만들기로 원하는 용량 설정.
-8. 윈도우 마저 설치
-9. Uncheck `Turn on fast startup`
+7. If you choose the option to not preserve existing data, you must specify the partition.    
+Delete all partitions and set the desired capacity for creating new ones.
+8. Complete the installation of Windows.
+9. Uncheck `Turn on fast startup`.
    * 제어판 > 모든 제어판 항목 > 전원 옵션 > 시스템 설정 > 현재 사용할 수 없는 설정 변경 > 빠른 시작 켜기 체크해제
-10. 시작버튼 우클릭 > 디스크 관리 > 할당되지 않은 파티션 우클릭 > 새 단순 볼륨 > 볼륨 크기는 free space에 우분투 원하는 용량 남을정도 > 드라이브 문자 할당 아무거나 > 파일 시스템 NTFS, 단위크기 기본값, 빠른포맷 O > 마법사 마침.
+10. Allocate partition for use in Windows.
+      * 시작버튼 우클릭 > 디스크 관리 > 할당되지 않은 파티션 우클릭 > 새 단순 볼륨 > 볼륨 크기는 free space에 우분투 원하는 용량 남을정도 > 드라이브 문자 할당 아무거나 > 파일 시스템 NTFS, 단위크기 기본값, 빠른포맷 O > 마법사 마침.
 
 ### Install Ubuntu
 1. Connect Ubuntu bootable USB, start the desktop, and press DEL (or the appropriate key) repeatedly to access BIOS.
