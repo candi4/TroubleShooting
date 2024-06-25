@@ -8,6 +8,7 @@
 5. Add `Korean (Hangul)` to input sources.
 6. Enter `Korean (Hangul)` settings 
 7. Configure the Hangul toggle key.
+8. Delete `English (US)`.
 
 
 ## Manage the delay of repeating keys
