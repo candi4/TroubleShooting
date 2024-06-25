@@ -1,4 +1,4 @@
-# TroubleShooting/GitHub
+# TroubleShooting/Git
 Troubleshooting issues related to Git and GitHub.
 
 ## git repository not found
