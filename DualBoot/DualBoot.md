@@ -1,5 +1,5 @@
 # DualBoot
-How to dualboot Windows and Ubuntu.
+How to dualboot Windows11 and Ubuntu20.04
 
 ## Summary
 Install Windows → Manage partitions in Windows → Install Ubuntu    
