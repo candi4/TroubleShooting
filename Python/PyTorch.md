@@ -5,13 +5,26 @@ Issues of PyTorch
 ## Install (Ubuntu)
 
 ### Install CUDA
+1. Update apt.
+    ```
+    sudo apt update
+    ```
+1. Check the GPU model and recommended driver.
+    ```
+    ubuntu-drivers devices
+    ```
+1. Install recommended driver.
+    ```
+    sudo apt install nvidia-driver-450
+    ```
+
 1. Check the GPU model on Ubuntu.
     ```
     lspci | grep -i VGA
     ```
     e.g. `GP102`
 
-2. Find CUDA Toolkit compatible with your GPU in [the table](https://en.wikipedia.org/wiki/CUDA).    
+2. Find CUDA Toolkit compatible with your GPU in [this table](https://en.wikipedia.org/wiki/CUDA).    
 e.g.    
 In the table `Compute Capability, GPU semiconductors and Nvidia GPU board products`,    
  `GP102` ➔ `6.1`.    
@@ -28,4 +41,6 @@ In the table `Compute Capability, GPU semiconductors and Nvidia GPU board produc
 
 Reference:    
 [Ubuntu 장착된 CPU 및 GPU 그래픽카드 확인 코드](https://nuggy875.tistory.com/30#google_vignette)    
-[Table `CUDA Toolkit and Corresponding Driver Versions`](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id4)    
+[~~CUDA Toolkit and Corresponding Driver Versions~~](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id4)    
+[CUDA toolkit 설치 완벽 정리](https://velog.io/@jk01019/CUDA-toolkit-%EC%84%A4%EC%B9%98-%EC%99%84%EB%B2%BD-%EC%A0%95%EB%A6%AC)    
+[[Ubuntu 20.04 LTS]Nvidia드라이버 설치하기](https://pstudio411.tistory.com/entry/Ubuntu-2004-Nvidia%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0)    
