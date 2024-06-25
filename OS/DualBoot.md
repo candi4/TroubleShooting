@@ -2,7 +2,7 @@
 How to dualboot Windows11 and Ubuntu20.04
 
 ## Summary
-Install Windows → Manage partitions in Windows → Install Ubuntu    
+Install Windows ➔ Manage partitions in Windows ➔ Install Ubuntu    
 The reason to install Windows first: partition management is easier in Windows than in Ubuntu.
 
 ## Process
