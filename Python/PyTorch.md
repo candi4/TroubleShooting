@@ -8,15 +8,16 @@ Issues of PyTorch
 
 W/ J.senior    
 I want to use cuda11.7 because I used it on the other computers.
-Directly install cuda11.7.     
+Directly install cuda11.7. (Selected `deb (network)` because it is fastest.)     
 Add in ~/.bashrc :
 ```
 export PATH="/usr/local/cuda-11.0/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda-11.0/lib64:$LD_LIBRARY_PATH"
 ```
-[[CUDA] nvcc가 안될 때 ~/.bashrc 수정](https://yoonchang.tistory.com/27)
-
-
+[[CUDA] nvcc가 안될 때 ~/.bashrc 수정](https://yoonchang.tistory.com/27)    
+Reboot    
+Test by `nvcc`(CUDA) and `nvidia-smi`(GPU driver).    
+\=================
 
 1. Update apt.
     ```
