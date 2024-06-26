@@ -2,7 +2,7 @@
 Issues with conda
 
 ## install (Ubuntu)
-1. Download Anaconda Individual Edition in [the Anaconda official website](www.anaconda.com/products/individual).
+1. Download Anaconda Individual Edition in [the Anaconda official website](https://www.anaconda.com/download/success).
 2. Navigate to the folder where Anaconda was downloaded.
 3. (Optional) Verify the data integrity using the sha256sum command.
     ```
