@@ -17,7 +17,7 @@ Issues with conda
     Enter yes for this: `Do you wish to update your shell profile to automatically initialize conda?`
 5. Add a line into `bashrc` to use anaconda prompt.
     ```
-    sudo gedit ~/.bashrc
+    gedit ~/.bashrc
     ```
     Add a line: `export PATH=~/anaconda3/bin:~/anaconda3/condabin:$PATH`
     ```
