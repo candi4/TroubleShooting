@@ -13,3 +13,8 @@ It's because the repository is private.
 ```
 $ git remote set-url origin https://KHJ273@github.com/KHJ273/EV_charging_robot.git/
 ```
+
+## Prune not existing branches
+```
+git fetch --prune
+```
