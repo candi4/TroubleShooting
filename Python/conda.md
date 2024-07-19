@@ -3,6 +3,9 @@ Issues with conda
 
 ## install (Ubuntu)
 1. Download Anaconda Individual Edition in [the Anaconda official website](https://www.anaconda.com/download/success).
+    ```
+    wget https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
+    ```
 2. Navigate to the folder where Anaconda was downloaded.
 3. (Optional) Verify the data integrity using the sha256sum command.
     ```
