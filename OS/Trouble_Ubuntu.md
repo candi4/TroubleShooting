@@ -51,3 +51,14 @@ unzip compressed.zip
 ```
 pwd
 ```
+
+## Communication with Ubuntu server
+### Send file
+```
+scp [options] [source] [target]
+```
+* From remote to local (Remote -> Local)    
+Should be run in local
+    ```
+    scp username@123.456.789.012:[source] [target]
+    ```
