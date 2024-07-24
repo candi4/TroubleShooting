@@ -58,3 +58,27 @@ References:
 * [CUDA Toolkit and Corresponding Driver Versions](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id4)    
 * [CUDA toolkit 설치 완벽 정리](https://velog.io/@jk01019/CUDA-toolkit-%EC%84%A4%EC%B9%98-%EC%99%84%EB%B2%BD-%EC%A0%95%EB%A6%AC)    
 * [[Ubuntu 20.04 LTS]Nvidia드라이버 설치하기](https://pstudio411.tistory.com/entry/Ubuntu-2004-Nvidia%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0)    
+
+## Install (Ubuntu, CUDA via conda)
+### Summary
+Install conda    
+➔ Install CUDA via conda    
+➔ Install PyTorch
+
+### Install CUDA (via conda)
+w/ P.
+1. Install conda
+2. Create and activate conda virtual environment
+3. Install cuda via conda ([Meta-package containing all toolkit packages for CUDA development](https://anaconda.org/nvidia/cuda-toolkit))
+    ```
+    conda install nvidia/label/cuda-11.7.1::cuda-toolkit
+    ```
+4. Install proper version of pytorch ([INSTALLING PREVIOUS VERSIONS OF PYTORCH](https://pytorch.org/get-started/previous-versions/))
+    ```
+    conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
+    ```
+5. Check version. `nvcc -V` returns superficial version.
+    ```
+    import torch
+    print(torch.version.cuda)
+    ```
