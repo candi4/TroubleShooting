@@ -56,3 +56,4 @@ How to make GitHub repository to be installed as a Python package
 * [Python 프로젝트를 패키지로 만들기 with setup.py](https://velog.io/@rhee519/python-project-packaging-setuptools)
 * [Adding Non-Code Files](https://python-packaging.readthedocs.io/en/latest/non-code-files.html)
 * [Python » 설명서 » 파이썬 모듈 배포 (레거시 버전) » 2.6. 패키지 데이터 설치하기](https://python.flowdas.com/distutils/setupscript.html#installing-package-data)
+* [GitHub repository CLIP/setup.py](https://github.com/openai/CLIP/blob/main/setup.py)
