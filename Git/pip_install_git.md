@@ -1,4 +1,4 @@
-# Git_Package
+# pip_install_git
 How to make GitHub repository to be installed as a Python package
 
 ## How to make repository
