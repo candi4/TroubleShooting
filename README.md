@@ -14,8 +14,4 @@ Troubleshooting issues related to Python.
 ### .gitignore
 List to be ignored when using git    
 Add `*.pyc`
-### install repository as a Python package
-```
-pip install git+https://github.com/openai/CLIP.git
-```
-[github repository로 python pip install 만드는 방법 정리](https://lsjsj92.tistory.com/592)
+Add `__pycache__`
