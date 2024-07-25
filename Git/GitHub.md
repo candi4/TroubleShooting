@@ -18,3 +18,13 @@ $ git remote set-url origin https://KHJ273@github.com/KHJ273/EV_charging_robot.g
 ```
 git fetch --prune
 ```
+
+## .gitignore
+Add List in .gitignore to be ignored when using git push
+```
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+```
+### References
+* [GitHub gitignore/Python.gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore)
