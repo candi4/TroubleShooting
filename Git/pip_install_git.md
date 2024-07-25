@@ -25,6 +25,9 @@ How to make GitHub repository to be installed as a Python package
             )
         ],
         include_package_data=False,
+        package_data={
+            'SofaGW': ['vessel/*'],
+        },
     )
     ```
     * `name` : Should be same as the folder name of package (not sure)
@@ -35,7 +38,9 @@ How to make GitHub repository to be installed as a Python package
     * `author` : To be seen in pip
     * `packages` : Files to be included or excluded in the repository
     * `install_requires` : Other packages to be installed automatically
-    * `include_package_data` : If true, installation includes non-code files in the repository
+    * `include_package_data` : If true, installation includes non-code files in the repository (doesn't work)
+    * `package_data` : Non-code files to be included by installation.    
+    The key is module name and the elements of the list are non-code files wanted to install
 
 ## How to install repository
 1. From default branch
