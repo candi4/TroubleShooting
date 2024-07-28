@@ -11,12 +11,12 @@
 * -> SD카드를 라즈베리파이에 꽂고 전원 연결. -> 2분이 지나도록 와이파이가 연결되지 않으면 라즈베리파이 전원 껐다가 다시 키기.
 * -> (노트북 연결 등으로 터미널 쓸 수 있게 되면 desktop environment 설치하기) 
 
-### Reference
+### References
 * [라즈베리파이 Raspberry Pi OS 설치 및 간단 설정 방법 (Raspberry Pi Imager 1.7.3)](https://blog.naver.com/kbc20000/222997275244)
 * [Raspberry Pi Imager installation files (Windows) ](https://downloads.raspberrypi.org/imager/) # imager_1.8.5.exe
 * [Ubuntu server version -> desktop version](https://roboticsbackend.com/install-ubuntu-on-raspberry-pi-without-monitor/)
 
-## Settings in Raspberry Pi imager
+## Settings in Raspberry Pi imager (for connection with laptop)
 * hostname 설정
 * SSH 사용 : 비밀번호 인증 사용
 * 사용자 이름
@@ -25,3 +25,26 @@
 * 로케일 설정 지정. 시간대 : Asia/Seoul , 키보드 레이아웃 : kr
 
 
+## Connect with laptop
+1. SSH (remote connection)    
+라즈베리파이 실행(노트북 핫스팟에 자동 연결) -> putty.exe 실행 -> 노트북 핫스팟 설정에서 라즈베리파이 IP 찾아서 PuTTY의 Host Name (or IP address) 에 넣기 -> Open -> 사용자 이름 입력 후 엔터 -> 사용자 비밀번호 입력 후 엔터 -> 원격 접속 완료
+2. (Desktop environment)    
+ 여기선 XFCE desktop environment 사용. 설치하기.
+```sudo apt update -> sudo apt install xfce4 xfce4-goodies -> (Select any display manager and press Enter.)```
+3. VNC (remote버전) 설정    
+    * 여기선 TigerVNC 씀.
+    * sudo apt install tigervnc-standalone-server -> vncserver -> 패스워드 입력(6-8자) (나는 123456) -> 패스워드 재입력 -> view-only password 설정 여부(나는 n) -> 포트 5901 열림 (VNC 비번 바꾸고 싶으면 vncpasswd 입력)
+    * vncserver -kill :1 -> ( 파일 ~/.vnc/xstartup 이 자동으로 생성되었으면 mv ~/.vnc/xstartup ~/.vnc/xstartup.bak ) -> nano ~/.vnc/xstartup (새로 생성) -> 우측 내용 복붙, 저장 후 나감. -> chmod +x ~/.vnc/xstartup 
+    * -> 연결되는지 테스트하기 위해(secure connection 아님) vncserver -localhost no :1 -> 노트북에서 연결해봄 -> vncserver -kill :1 
+    * 방법 1 : vncserver (5901 열음) -> 노트북 cmd 열음 -> ssh -L 59000:localhost:5901 -C -N -l hjrpb37 192.168.137.250 -> 노트북 vnc viewer에서 localhost:59000 연결 -> 연결완료
+    * 방법 2 : vncserver (5901 열음) PuTTY 열음 -> 카테고리 Session 선택 -> Host Name -> 라즈베리파이 ip 넣음 -> 카테고리 SSH의 Tunnels 선택 -> Source port에 59000 입력, Destination에 localhost:5901 입력 -> Add 클릭 -> Open -> 로그인 -> vnc뷰어에서 localhost:59000 연결
+4. VNC (remote버전) 연결    
+    * VNC 첫 설정 이후 라즈베리파이 킬 때.
+    * PuTTY 열음 -> 카테고리 Session 선택 -> Host Name -> 라즈베리파이 ip 넣음 -> 카테고리 SSH의 Tunnels 선택 -> Source port에 59000 입력, Destination에 localhost:5901 입력 -> Add 클릭 -> Open -> 아이디 비번 입력
+    * -> vncserver (5901 열음) -> vnc viewer에서 localhost:59000 연결 -> continue -> vnc 비밀번호(123456) 입력 -> 완료.
+
+### References
+* [SSH connect in Windows CMD without PuTTY ](https://roboticsbackend.com/install-ubuntu-on-raspberry-pi-without-monitor/)
+* [Download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+* [라즈베리파이 화면을 노트북에서 보기](https://bytexd.com/how-to-install-configure-vnc-server-on-ubuntu/)
+* [VNC의 두 가지(local, remote)(local이 원본)](https://www.reddit.com/r/linux4noobs/comments/b1qy53/can_i_remotely_use_ubuntu_without_a_monitor/)
