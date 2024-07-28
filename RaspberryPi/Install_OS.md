@@ -11,6 +11,11 @@
 * -> SD카드를 라즈베리파이에 꽂고 전원 연결. -> 2분이 지나도록 와이파이가 연결되지 않으면 라즈베리파이 전원 껐다가 다시 키기.
 * -> (노트북 연결 등으로 터미널 쓸 수 있게 되면 desktop environment 설치하기) 
 
+### Reference
+* [라즈베리파이 Raspberry Pi OS 설치 및 간단 설정 방법 (Raspberry Pi Imager 1.7.3)](https://blog.naver.com/kbc20000/222997275244)
+* [Raspberry Pi Imager installation files (Windows) ](https://downloads.raspberrypi.org/imager/) # imager_1.8.5.exe
+* [Ubuntu server version -> desktop version](https://roboticsbackend.com/install-ubuntu-on-raspberry-pi-without-monitor/)
+
 ## Settings in Raspberry Pi imager
 * hostname 설정
 * SSH 사용 : 비밀번호 인증 사용
@@ -20,8 +25,3 @@
 * 로케일 설정 지정. 시간대 : Asia/Seoul , 키보드 레이아웃 : kr
 
 
-
-## Reference
-* [라즈베리파이 Raspberry Pi OS 설치 및 간단 설정 방법 (Raspberry Pi Imager 1.7.3)](https://blog.naver.com/kbc20000/222997275244)
-* [Raspberry Pi Imager installation files (Windows) ](https://downloads.raspberrypi.org/imager/) # imager_1.8.5.exe
-* [Ubuntu server version -> desktop version](https://roboticsbackend.com/install-ubuntu-on-raspberry-pi-without-monitor/)
