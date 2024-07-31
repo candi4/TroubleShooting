@@ -30,7 +30,7 @@ Troubleshooting issues related to Git and GitHub.
     ls
     ```
 
-## Prune not existing branches
+## Prune non-existing remote branches
 ```
 git fetch --prune
 ```
