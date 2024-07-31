@@ -36,7 +36,10 @@ unzip compressed.zip
 ```
 pwd
 ```
-
+### Check GPUs in use in realtime
+```
+gpustat --watch
+```
 ## Communication with Ubuntu server
 ### Send file
 ```
