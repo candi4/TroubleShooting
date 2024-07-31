@@ -2,6 +2,14 @@
 Troubleshooting issues related to Git and GitHub.
 
 ## Clone private repository
+```
+git clone https://KHJ273@github.com/KHJ273/EV_charging_robot.git
+
+cd AsanGuidewireRL
+git checkout origin/main
+git branch
+```
+### Another way
 1. Change directory into one be used as root
 2. Initialize git to use the directory as root
     ```
