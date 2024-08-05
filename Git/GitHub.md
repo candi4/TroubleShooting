@@ -43,6 +43,11 @@ git branch
 git fetch --prune
 ```
 
+## Get the commit id of the head of master
+```
+git rev-parse HEAD
+```
+
 ## .gitignore
 Add List in .gitignore to be ignored when using git push
 ```
