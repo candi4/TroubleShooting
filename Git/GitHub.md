@@ -5,7 +5,7 @@ Troubleshooting issues related to Git and GitHub.
 ```
 git clone https://KHJ273@github.com/KHJ273/EV_charging_robot.git
 
-cd AsanGuidewireRL
+cd EV_charging_robot
 git checkout origin/main
 git branch
 ```
