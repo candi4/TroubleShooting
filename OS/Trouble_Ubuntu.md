@@ -15,3 +15,20 @@ Reference:
 [고통받던 ubuntu 20.04 화면 프리징 현상 해결](https://velog.io/@wltnrms0629/%EA%B3%A0%ED%86%B5%EB%B0%9B%EB%8D%98-ubuntu-20.04-%ED%99%94%EB%A9%B4-%ED%94%84%EB%A6%AC%EC%A7%95-%ED%98%84%EC%83%81-%ED%95%B4%EA%B2%B0)    
 [intel_idle.max_cstate=1](https://medium.com/@dibyadas/intel-idle-max-cstate-1-b20281e4b2e2)    
 
+## Installing package via cmake
+
+Installing into root:
+```shell
+mkdir build
+cd build
+cmake ..
+sudo make install
+```
+This installs into `/usr/local/include/`.
+* For reference: Building in `build` directory:
+    ```shell
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ```
