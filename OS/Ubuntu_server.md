@@ -46,10 +46,17 @@ gpustat --watch
 scp [options] [source] [target]
 ```
 * From remote to local (Remote -> Local)    
-Should be run in local
-    ```
+  Should be run in local
+    ```shell
     # One file
     scp username@123.456.789.012:[source] [target]
-    # All in the directory
+    # All files in the directory
     scp username@123.456.789.012:[sourcedir]/* [target]
+    # All files including subdirectories
+    scp -r username@123.456.789.012:[sourcedir]/* [target]
+    ```
+* From local to remote (Local -> Remote)    
+  Should be run in local
+    ```shell
+    scp [source] username@123.456.789.012:[target]
     ```
