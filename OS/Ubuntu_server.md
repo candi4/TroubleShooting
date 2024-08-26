@@ -7,6 +7,7 @@ How to control ubuntu server with command
 mkdir directory1
 # multiple directories
 mkdir dir1 dir2
+mkdir d{1,2}
 mkdir -p directory{1..3}/sub{01..10} # 30 directories
 mkdir dir_{a-z} # 26 directories
 ```
