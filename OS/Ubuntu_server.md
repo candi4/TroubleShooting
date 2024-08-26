@@ -33,6 +33,12 @@ rm -r directory1
 mv [PATH/]src [PATH/]dest
 ```
 * Move [PATH/]src into [PATH/]dest
+### Copy file
+```shell
+cp [PATH/]src [PATH/]dest
+cp -r src/ dest/
+```
+* Copy [PATH/]src into [PATH/]dest
 ### Download from internet
 ```shell
 wget Web_Addresses
