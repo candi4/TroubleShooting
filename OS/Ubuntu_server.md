@@ -57,9 +57,14 @@ gpustat --watch
 ```
 ## Communication with Ubuntu server
 ### Send file
+Copies `source` and pastes it in `target`.
 ```shell
 scp [options] [source] [target]
 ```
+* `-r` : Copies and pastes directories and their content recursively.
+* `-rf` : May not work.
+
+Examples
 * From remote to local (Remote -> Local)    
   Should be run in local
     ```shell
