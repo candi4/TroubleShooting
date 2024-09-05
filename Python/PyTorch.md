@@ -67,18 +67,25 @@ Install conda
 
 ### Install CUDA (via conda)
 w/ P.
-1. Install conda
+1. [Install conda](https://github.com/candi4/TroubleShooting/blob/main/Python/conda.md#install-ubuntu)
 2. Create and activate conda virtual environment
 3. Install cuda via conda ([Meta-package containing all toolkit packages for CUDA development](https://anaconda.org/nvidia/cuda-toolkit))
-    ```
+    ```shell
     conda install nvidia/label/cuda-11.7.1::cuda-toolkit
     ```
 4. Install proper version of pytorch ([INSTALLING PREVIOUS VERSIONS OF PYTORCH](https://pytorch.org/get-started/previous-versions/))
-    ```
+    ```shell
     conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
     ```
 5. Check version. `nvcc -V` returns superficial version.
-    ```
+    ```shell
     import torch
     print(torch.version.cuda)
     ```
+```shell
+conda install nvidia/label/cuda-11.7.1::cuda-toolkit -y
+conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia -y
+python
+import torch
+print(torch.version.cuda)
+```
