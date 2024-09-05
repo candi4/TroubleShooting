@@ -38,6 +38,7 @@ Issues with conda
 ```shell
 wget https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
 bash Anaconda3-2024.06-1-Linux-x86_64.sh
+rm Anaconda3-2024.06-1-Linux-x86_64.sh
 
 nano ~/.bashrc
 # export PATH=~/anaconda3/bin:~/anaconda3/condabin:$PATH
