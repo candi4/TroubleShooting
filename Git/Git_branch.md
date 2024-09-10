@@ -43,9 +43,11 @@ git branch
 git fetch --prune
 ```
 
-## Get the commit id of the head of master
+## Get the commit id (branch hash)
 ```
+git rev-parse <branch name>
 git rev-parse HEAD
+git log
 ```
 
 ## .gitignore
