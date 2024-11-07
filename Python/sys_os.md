@@ -14,7 +14,13 @@ os.path.dirname(filename)
 * directory1/directory2/file.exe -> directory1/directory2    
 * directory1/directory2/file -> directory1/directory2    
 * directory1/directory2/ -> directory1/directory2    
-### Make directories
+### Check existance of the directory or the file
+```python
+os.path.exists(filename)
+os.path.exists(dirname)
+os.path.exists(os.path.dirname(filename))
+```
+### Make directories (mkdir)
 ```python
 os.makedirs("dir1/dir2", exist_ok=True)
 ```
