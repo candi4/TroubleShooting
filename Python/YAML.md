@@ -61,3 +61,19 @@ The result of reading the file in python:
 ```
 * References
     * [YAML이란?](https://www.redhat.com/ko/topics/automation/what-is-yaml)
+## Type of datas in `.yaml` in python
+In `.yaml`:
+```yaml
+array:
+  - - 1
+    - 2
+    - 3
+  - - 4
+    - 5
+    - 6.2
+    - word
+```
+In python:
+```python
+{'array': [[1, 2, 3], [4, 5, 6.2, 'word']]}
+```
