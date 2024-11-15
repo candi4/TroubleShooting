@@ -40,3 +40,9 @@ filename, file_extension = os.path.splitext(path)
 * `'/a/b.c/d'` -> `('/a/b.c/d', '')`
 * References
     * [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
+### Delete files
+```python
+import shutil
+shutil.rmtree(dir_path) # deletes a directory and all its contents.
+```
+[How can I delete a file or folder in Python?](https://stackoverflow.com/questions/6996603/how-can-i-delete-a-file-or-folder-in-python)
