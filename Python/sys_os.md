@@ -25,3 +25,18 @@ os.path.exists(os.path.dirname(filename))
 os.makedirs("dir1/dir2", exist_ok=True)
 ```
 * If `exist_ok=False`, an error occurs if the directory already exists. The default value is `False`.
+### Get subpaths
+```python
+# Direct subpaths (subfiles and subdirectories)
+subpath_list = os.listdir(directory)
+# Only direct subfiles 
+file_list = [path for path in os.listdir(directory) if os.path.isfile(f"{directory}/{path}")]
+```
+### Split extention of a filename
+```python
+filename, file_extension = os.path.splitext(path)
+```
+* `'/path/to/somefile.ext'` -> `('/path/to/somefile','.ext')`
+* `'/a/b.c/d'` -> `('/a/b.c/d', '')`
+* References
+    * [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
