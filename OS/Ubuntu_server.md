@@ -55,6 +55,10 @@ pwd
 ```shell
 gpustat --watch
 ```
+### Check users using GPU server
+```shell
+who
+```
 ## Communication with Ubuntu server
 ### Send file
 Copies `source` and pastes it in `target`.
