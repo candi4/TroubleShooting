@@ -60,3 +60,8 @@ os.replace(src, dst)
 shutil.move(src, dst)
 ```
 [How do I move a file in Python?](https://stackoverflow.com/questions/8858008/how-do-i-move-a-file-in-python)
+### Copy files
+```python
+shutil.copy(src, dst)
+```
+[shutil — High-level file operations #shutil.copy](https://docs.python.org/ko/3/library/shutil.html#shutil.copy)
