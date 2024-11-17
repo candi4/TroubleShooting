@@ -15,6 +15,12 @@ mkdir dir_{a-z} # 26 directories
 
 References:
 * [Is there a way to create multiple directories at once with mkdir?](https://askubuntu.com/questions/731721/is-there-a-way-to-create-multiple-directories-at-once-with-mkdir)
+### Create a file
+```shell
+touch test.txt
+nano nonexistfile.txt # You can create and revise a file simulatenously.
+```
+Reference: [How to Create a File in Linux](https://phoenixnap.com/kb/how-to-create-a-file-in-linux)
 ### Remove file/directory
 ```shell
 rm filename.exe
