@@ -28,6 +28,12 @@ filename, file_extension = os.path.splitext(path)
 * `'/a/b.c/d'` -> `('/a/b.c/d', '')`
 * References
     * [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
+### Split directory
+```python
+head, tail = os.path.split("/tmp/d/a.dat")
+print(tail) # 'a.dat'
+print(head) # '/tmp/d'
+```
 ## Combine directories
 ```python
 os.path.join("/A/B/C", "file.py") # '/A/B/C/file.py'
