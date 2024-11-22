@@ -1,7 +1,7 @@
 # sys_os
 Issues about the module sys and os
 
-## Usages
+## Handle path string
 ### Add environment variable
 ```python
 # <current_directory>/../
@@ -20,6 +20,19 @@ os.path.exists(filename)
 os.path.exists(dirname)
 os.path.exists(os.path.dirname(filename))
 ```
+### Split extention of a filename
+```python
+filename, file_extension = os.path.splitext(path)
+```
+* `'/path/to/somefile.ext'` -> `('/path/to/somefile','.ext')`
+* `'/a/b.c/d'` -> `('/a/b.c/d', '')`
+* References
+    * [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
+## Combine directories
+```python
+os.path.join("/A/B/C", "file.py") # '/A/B/C/file.py'
+```
+## Manage files and directories
 ### Make directories (mkdir)
 ```python
 os.makedirs("dir1/dir2", exist_ok=True)
@@ -38,14 +51,6 @@ subpath_list = os.listdir('dir1')
 # Only direct subfiles 
 file_list = [path for path in os.listdir(directory) if os.path.isfile(f"{directory}/{path}")]
 ```
-### Split extention of a filename
-```python
-filename, file_extension = os.path.splitext(path)
-```
-* `'/path/to/somefile.ext'` -> `('/path/to/somefile','.ext')`
-* `'/a/b.c/d'` -> `('/a/b.c/d', '')`
-* References
-    * [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
 ### Delete files
 ```python
 import shutil
