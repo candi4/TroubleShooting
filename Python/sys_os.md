@@ -34,6 +34,14 @@ head, tail = os.path.split("/tmp/d/a.dat")
 print(tail) # 'a.dat'
 print(head) # '/tmp/d'
 ```
+You can take only the file name excluding the parent path:
+```python
+os.path.basename(path) # Same with os.path.split(path)[1]
+```
+* "/d/workspace/dir1/dir2/dir3"-> 'dir3'
+* "/d/workspace/dir1/dir2"-> 'dir2'
+* "/d/workspace/dir1/dir2/"-> ''
+* "/d/workspace/dir1/dir2/test.py"-> 'test.py'
 ## Combine directories
 ```python
 os.path.join("/A/B/C", "file.py") # '/A/B/C/file.py'
