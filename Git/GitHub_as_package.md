@@ -1,5 +1,5 @@
 # GitHub_as_package
-How to make GitHub repository to be installed as a Python package
+How to make GitHub repository to be installed as a **Python package**
 
 ## Repository to be installed
 
