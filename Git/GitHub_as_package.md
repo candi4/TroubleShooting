@@ -57,13 +57,34 @@ How to make GitHub repository to be installed as a Python package
     ```
     SofaGW @ git+https://github.com/candi4/SofaGuidewireNav.git
     ```
+It also works for private repositories. But, It requires github id and token.
 ### References
 * [github repository로 python pip install 만드는 방법 정리](https://lsjsj92.tistory.com/592)
 * [Python 프로젝트를 패키지로 만들기 with setup.py](https://velog.io/@rhee519/python-project-packaging-setuptools)
 * [Adding Non-Code Files](https://python-packaging.readthedocs.io/en/latest/non-code-files.html)
 * [Python » 설명서 » 파이썬 모듈 배포 (레거시 버전) » 2.6. 패키지 데이터 설치하기](https://python.flowdas.com/distutils/setupscript.html#installing-package-data)
 * [GitHub repository CLIP/setup.py](https://github.com/openai/CLIP/blob/main/setup.py)
+* [Is it possible to use pip to install a package from a private GitHub repository?](https://stackoverflow.com/questions/4830856/is-it-possible-to-use-pip-to-install-a-package-from-a-private-github-repository)
 
+## Install repository from local
+Or, you can install repository cloned to local.
+```shell
+pip install git+file:///home/user1/project/myrepo
+```
+```shell
+pip install -e /home/user1/project/myrepo
+```
+* `pip install .`:
+Installs the project into the current environment by copying it.
+Reinstallation is required after code changes.
+* `pip install -e .`:
+Installs the project into the current environment in "editable" mode, allowing changes in the source code to be immediately reflected.
+Suitable for development purposes.
+### References
+* [Is it possible to use pip to install a package from a private GitHub repository?](https://stackoverflow.com/questions/4830856/is-it-possible-to-use-pip-to-install-a-package-from-a-private-github-repository)
+* [pip install a local git repository](https://stackoverflow.com/questions/14159482/pip-install-a-local-git-repository)
+* [pip install . 와 pip install -e . 의 차이
+](https://velog.io/@jk01019/pip-install-.-%EC%99%80-pip-install-e-.-%EC%9D%98-%EC%B0%A8%EC%9D%B4)
 
 ## TODO
 * `git submodule update --recursive --init`
