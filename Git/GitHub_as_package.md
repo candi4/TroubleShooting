@@ -57,7 +57,8 @@ How to make GitHub repository to be installed as a **Python package**
     ```
     SofaGW @ git+https://github.com/candi4/SofaGuidewireNav.git
     ```
-It also works for private repositories. But, It requires github id and token.
+It also works for private repositories and when installing with `pip install -r requirements.txt`. 
+However, it requires a GitHub ID and token.
 ### References
 * [github repository로 python pip install 만드는 방법 정리](https://lsjsj92.tistory.com/592)
 * [Python 프로젝트를 패키지로 만들기 with setup.py](https://velog.io/@rhee519/python-project-packaging-setuptools)
