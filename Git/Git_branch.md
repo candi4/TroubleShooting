@@ -59,3 +59,18 @@ __pycache__/
 ```
 ### References
 * [GitHub gitignore/Python.gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore)
+
+## Revert pushed commit
+* Using command
+    ```shell
+    git log 
+    git revert --no-commit HEAD~3.. # three steps ago
+    git commit -m <message>
+    git push <remote> <branch>
+    ```
+* Using vscode
+    1. See gitgraph
+    2. Right-click on the commit
+    3. Click `Revert`
+### References
+* [원격저장소에 올라간 git commit 되돌리기](https://simple-ing.tistory.com/60)
