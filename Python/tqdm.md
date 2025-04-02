@@ -22,6 +22,16 @@ from tqdm import tqdm
 for data_order in (pbar := tqdm(range(100_000))):
     pass
 ```
+```python
+from tqdm import tqdm
+max_step = 1000
+with tqdm(total=max_step, desc="Process") as pbar:
+    step_count = max_step
+    while step_count > 0:
+        step_count -= 1
+        pbar.n = max_step - step_count
+        pbar.refresh()
+```
 ## Represent text
 ### Dynamic description
   100%|███████████████| 10/10 [00:10<00:00,  1.01s/it, bg_filename=bg_filename9]
