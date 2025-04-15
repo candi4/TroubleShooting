@@ -65,7 +65,7 @@ gpustat --watch
 ```shell
 who
 ```
-### Check which server I am using
+### Check which server (IP) I am using
 ```shell
 hostname -I
 wget -qO- ifconfig.co
