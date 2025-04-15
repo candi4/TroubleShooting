@@ -65,6 +65,13 @@ gpustat --watch
 ```shell
 who
 ```
+### Check which server I am using
+```shell
+hostname -I
+wget -qO- ifconfig.co
+```
+Reference: [find out external ip and use to access ssh server](https://askubuntu.com/questions/1248598/find-out-external-ip-and-use-to-access-ssh-server)
+
 ## Communication with Ubuntu server
 ### Send file
 Copies `source` and pastes it in `target`.
