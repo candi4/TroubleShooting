@@ -5,8 +5,8 @@ Parsing arguments entered from the command line.
 ```python
 # basic.py
 import argparse
-parser = argparse.ArgumentParser(description="Setting for training")
 
+parser = argparse.ArgumentParser(description="Setting for training")
 parser.add_argument("-g", "--gpunumber", help="Select number for GPU",type=int, default=0)
 parser.add_argument('--verbose', action='store_true', help='Print detailed message')
 
