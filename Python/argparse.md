@@ -1,5 +1,6 @@
 # argparse
-Parsing arguments entered from the command line.
+Parsing arguments entered from the command line.    
+Reference: [argparse documentation](https://docs.python.org/3/library/argparse.html)
 
 ## Basic
 ```python
@@ -7,10 +8,11 @@ Parsing arguments entered from the command line.
 import argparse
 
 parser = argparse.ArgumentParser(description="Setting for training")
-parser.add_argument("-g", "--gpunumber", help="Select number for GPU", type=int, default=0)
+parser.add_argument('-g', '--gpunumber', help="Select number for GPU", type=int, default=0)
 parser.add_argument('--verbose', action='store_true', help='Print detailed message')
 
 args = parser.parse_args()
+config = vars(args) # dict
 gpunumber = args.gpunumber
 verbose = args.verbose
 ```
@@ -21,7 +23,10 @@ python basic.py --gpunumber 3           # gpunumber=3; verbose=False
 python basic.py --gpunumber 3 --verbose # gpunumber=3; verbose=True
 ```
 
-## action
+### Test in python
+parse_args
+
+## add_argument: `action`
 The action keyword argument specifies how the command-line arguments should be handled.    
 
 | `action` Value      | Description |
@@ -57,6 +62,42 @@ This prints a complete help message for all the options in the current parser an
 ### `'version'`
 This expects a version= keyword argument in the add_argument() call, and prints version information and exits when invoked:
 
-
-
 Reference: [argparse documentation #action](https://docs.python.org/3/library/argparse.html#action)
+
+## add_argument: `dest`
+```python
+# example.py
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--save-image', action='store_true', default=True,
+                    help="Save images while training. Disable with --no-save-image.")
+parser.add_argument('--no-save-image', dest='save_image', action='store_false',
+                    help="Do not save images while training.")
+args = parser.parse_args()
+
+save_image = args.save_image
+```
+```shell
+python example.py                 # save_image = True
+python example.py --save-image    # save_image = True
+python example.py --no-save-image # save_image = False
+```
+* The `default` parameter is used to avoid conflicts between options.
+
+## Tips
+### Naming
+Any internal `-` characters will be converted to `_` characters to make sure the string is a valid attribute name.
+```python
+# example.py
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--foo-bar')
+args = parser.parse_args()
+
+foo_bar = args.foo_bar
+```
+```shell
+python example.py --foo-bar apple # foo_bar='apple'
+```
