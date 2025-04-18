@@ -85,6 +85,24 @@ python example.py --no-save-image # save_image = False
 ```
 * The `default` parameter is used to avoid conflicts between options.
 
+## add_argument: `nargs`
+```python
+# example.py
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-l', '--lr-scale', nargs=2, metavar=('START', 'END'),
+                    help="Start and end scale factors to multiply default learning rate",
+                    type=float, default=[1.0, 1.0])
+args = parser.parse_args()
+
+lr_scale = args.lr_scale
+```
+```shell
+python example.py # lr_scale = [1.0, 1.0]
+python example.py --lr-scale 4.0 3 # lr_scale = [4.0, 3.0]
+```
+
 ## Tips
 ### Naming
 Any internal `-` characters will be converted to `_` characters to make sure the string is a valid attribute name.
