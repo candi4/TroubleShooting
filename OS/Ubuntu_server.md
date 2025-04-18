@@ -64,6 +64,7 @@ gpustat --watch
 ### Check users using GPU server
 ```shell
 who
+who am i # Check which one is me
 ```
 ### Check which server (IP) I am using
 ```shell
