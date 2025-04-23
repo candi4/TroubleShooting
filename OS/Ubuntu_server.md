@@ -1,7 +1,7 @@
 # Ubuntu_server
 How to control ubuntu server with command
 
-## Ubuntu commands
+## Active commands
 ### Make directory
 ```shell
 mkdir directory1
@@ -53,6 +53,8 @@ wget Web_Addresses
 ```shell
 unzip compressed.zip
 ```
+
+## Passive commands
 ### Get current path
 ```shell
 pwd
@@ -72,7 +74,7 @@ hostname -I
 wget -qO- ifconfig.co
 ```
 Reference: [find out external ip and use to access ssh server](https://askubuntu.com/questions/1248598/find-out-external-ip-and-use-to-access-ssh-server)
-### CPU
+### Check CPU
 ```shell
 lscpu
 ```
