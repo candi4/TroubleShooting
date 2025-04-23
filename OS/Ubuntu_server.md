@@ -72,6 +72,12 @@ hostname -I
 wget -qO- ifconfig.co
 ```
 Reference: [find out external ip and use to access ssh server](https://askubuntu.com/questions/1248598/find-out-external-ip-and-use-to-access-ssh-server)
+### CPU
+```shell
+lscpu
+```
+* `CPU(s)`: The number of CPU cores. (Parallel process)
+
 
 ## Communication with Ubuntu server
 ### Send file
