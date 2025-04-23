@@ -78,7 +78,9 @@ Reference: [find out external ip and use to access ssh server](https://askubuntu
 ```shell
 lscpu
 ```
-* `CPU(s)`: The number of CPU cores. (Parallel process)
+* `Socket(s)`: Number of physical CPUs on the motherboard
+* `Core(s) per socket`: Physical cores per CPU
+  * Total physical cores = `Socket(s)` * `Core(s) per socket` (Parallel process)
 
 
 ## Communication with Ubuntu server
