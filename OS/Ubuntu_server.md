@@ -1,7 +1,13 @@
 # Ubuntu_server
 How to control ubuntu server with command
 
+
+
+
+
+
 ## Active commands
+
 ### Make directory
 ```shell
 mkdir directory1
@@ -15,12 +21,16 @@ mkdir dir_{a-z} # 26 directories
 
 References:
 * [Is there a way to create multiple directories at once with mkdir?](https://askubuntu.com/questions/731721/is-there-a-way-to-create-multiple-directories-at-once-with-mkdir)
+
+
 ### Create a file
 ```shell
 touch test.txt
 nano nonexistfile.txt # You can create and revise a file simulatenously.
 ```
 Reference: [How to Create a File in Linux](https://phoenixnap.com/kb/how-to-create-a-file-in-linux)
+
+
 ### Remove file/directory
 ```shell
 rm filename.exe
@@ -34,46 +44,77 @@ rm -r directory1
 * `-v` : Provides a verbose output.
 * `--help` : Displays the help text.
 * `--version` : Displays the command version.
+
+
 ### Move file/directory 
 ```shell
 mv [PATH/]src [PATH/]dest
 ```
 * Move [PATH/]src into [PATH/]dest
+
+
 ### Copy file
 ```shell
 cp [PATH/]src [PATH/]dest
 cp -r src/ dest/
 ```
 * Copy [PATH/]src into [PATH/]dest
+
+
 ### Download from internet
 ```shell
 wget Web_Addresses
 ```
+
+
 ### Unzip
 ```shell
 unzip compressed.zip
 ```
 
+### Save output to file
+```shell
+python code.py > log.txt 2>&1 # Saves output without displaying
+python code.py 2>&1 | tee log.txt # Displays and saves output
+```
+* `2>&1`: include error message
+
+
+
+
+
+
+
+
 ## Passive commands
+
 ### Get current path
 ```shell
 pwd
 ```
+
+
 ### Check GPUs in use in realtime
 ```shell
 gpustat --watch
 ```
+
+
 ### Check users using GPU server
 ```shell
 who
 who am i # Check which one is me
 ```
+
+
 ### Check which server (IP) I am using
 ```shell
 hostname -I
 wget -qO- ifconfig.co
 ```
 Reference: [find out external ip and use to access ssh server](https://askubuntu.com/questions/1248598/find-out-external-ip-and-use-to-access-ssh-server)
+
+
 ### Check CPU
 ```shell
 lscpu
@@ -83,7 +124,17 @@ lscpu
   * Total physical cores = `Socket(s)` * `Core(s) per socket` (Parallel process)
 
 
+
+
+
+
+
+
+
+
+
 ## Communication with Ubuntu server
+
 ### Send file
 Copies `source` and pastes it in `target`.
 ```shell
