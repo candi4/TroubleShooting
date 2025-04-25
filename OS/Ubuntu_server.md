@@ -73,6 +73,7 @@ unzip compressed.zip
 ```
 
 ### Save output to file
+These aren't compatible with tqdm in python. Refer to `taceback` module of python.
 ```shell
 python code.py > log.txt 2>&1 # Saves output without displaying
 python code.py 2>&1 | tee log.txt # Displays and saves output
