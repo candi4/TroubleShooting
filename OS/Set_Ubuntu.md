@@ -26,5 +26,13 @@ sudo apt install terminator
 ```
 [Show only one instance of Terminator in the favorite dock](https://askubuntu.com/questions/1242536/ubuntu-dock-adds-a-new-icon-when-i-open-certain-programs)
 
+If Ctrl+Shift+e doesn't work:
+```shell
+ibus-setup
+```
+Emoji > Keyboard Shortcuts > Emoji annotation    
+Remove it.
+
+
 ### Etc
 chrome, vscode
