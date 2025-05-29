@@ -26,12 +26,17 @@ sudo apt install terminator
 ```
 [Show only one instance of Terminator in the favorite dock](https://askubuntu.com/questions/1242536/ubuntu-dock-adds-a-new-icon-when-i-open-certain-programs)
 
-If Ctrl+Shift+e doesn't work:
-```shell
-ibus-setup
-```
-Emoji > Keyboard Shortcuts > Emoji annotation    
-Remove it.
+* If Ctrl+Shift+e doesn't work:
+  ```shell
+  ibus-setup
+  ```
+  Emoji > Keyboard Shortcuts > Emoji annotation    
+  Remove it.
+* How to add terminator in favorite
+  1. Settings > Keyboard Shortcuts    
+  2. Remove "Launch terminal" (press backspace)
+  3. Add custom Shortcuts
+  4. Name "Terminator", Command "terminator", shrotcut ctrl+alt+T
 
 
 ### Etc
