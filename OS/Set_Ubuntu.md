@@ -2,7 +2,7 @@
 
 ## Install Hangul
 1. `sudo apt update` 
-2. `sudo apt upgrade ibus-hangul -y` 
+2. `sudo apt install ibus-hangul -y` 
 3. Reboot.
 4. settings ➔ Region & Language
 5. Add `Korean (Hangul)` to input sources.
