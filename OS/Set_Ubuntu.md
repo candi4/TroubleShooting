@@ -22,7 +22,7 @@ Settings ➔ Power ➔ Black screen ➔ Never
 ## Additional Install
 ### Terminator
 ```
-sudo apt install terminator
+sudo apt install terminator -y
 ```
 [Show only one instance of Terminator in the favorite dock](https://askubuntu.com/questions/1242536/ubuntu-dock-adds-a-new-icon-when-i-open-certain-programs)
 
