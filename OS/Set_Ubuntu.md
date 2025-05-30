@@ -38,6 +38,13 @@ sudo apt install terminator -y
   3. Add custom Shortcuts
   4. Name "Terminator", Command "terminator", shrotcut ctrl+alt+T
 
+### RealVNC
+1. Download vnc viewer
+2. Deactivate Wayland (For Ubuntu24.04)
+  * `sudo nano /etc/gdm3/custom.conf`
+  * Find the line `#WaylandEnable=false` and remove the comment symbol (#).
+3. Reboot (For Ubuntu24.04)
+
 
 ### Etc
 chrome, vscode, vnc server/viewer
