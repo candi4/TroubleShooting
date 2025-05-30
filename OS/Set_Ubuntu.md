@@ -40,4 +40,4 @@ sudo apt install terminator -y
 
 
 ### Etc
-chrome, vscode
+chrome, vscode, vnc server/viewer
