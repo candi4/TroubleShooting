@@ -1,5 +1,5 @@
 # Ubuntu 24.04 setup
-## 0. Repository change
+## Repository change
 ### [24.04]
   ```
   sudo gedit /etc/apt/sources.list.d/ubuntu.sources
@@ -13,13 +13,13 @@ sudo gedit /etc/apt/sources.list
 kr.archive.ubuntu -> mirror.kakao    
 (not security)
 
-## 1. install Hangul
+## install Hangul
 - Settings -> system -> region & language
 - Manage installed languages -> install/remove languages -> 'Korean' check -> reboot
 - open terminal -> ibus-setup -> input method -> add -> 'Hangul'
 - Settings -> keyboard -> Input sources add 'Korean(Hangul)' -> remove others -> preference of Korean(Hangul) -> Hangul Toggle key 'add'
 
-## 2. Vscode
+## Vscode
 - Install vscode
 - Extension
 	- python, python Extension pack, Black formatter
@@ -32,10 +32,10 @@ kr.archive.ubuntu -> mirror.kakao
 		- zoom level
 		- font size
 
-## 3. Conda install
+## Conda install
 - install conda :https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
 
-## 4. CUDA install
+## CUDA install
 - install cuda : https://developer.nvidia.com/cuda-12-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=24.04&target_type=deb_local
 - post-installation
   ```
@@ -43,7 +43,7 @@ kr.archive.ubuntu -> mirror.kakao
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda/lib64
   ```
 
-## 5. LAN driver
+## LAN driver
 - check model
   ```
   lspci | grep -i ethernet
@@ -54,7 +54,7 @@ kr.archive.ubuntu -> mirror.kakao
   sudo ./autorun.sh
   ```
 
-## 6. bashrc alias
+## bashrc alias
 ```
 alias eb='gedit ~/.bashrc'
 alias sb='source ~/.bashrc'
