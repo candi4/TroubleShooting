@@ -10,7 +10,8 @@
 ```
 sudo gedit /etc/apt/sources.list
 ```
-kr.archive.ubuntu -> mirror.kakao
+kr.archive.ubuntu -> mirror.kakao    
+(not security)
 
 ## 1. install Hangul
 - Settings -> system -> region & language
