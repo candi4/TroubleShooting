@@ -1,6 +1,6 @@
 # PyTorch
-Issues of PyTorch
-
+Issues of PyTorch    
+Recommend: CUDA via conda
 
 ## Install (Ubuntu)
 ### Summary
@@ -73,11 +73,11 @@ w/ P.
     ```shell
     conda install nvidia/label/cuda-11.7.1::cuda-toolkit
     ```
-4. Install proper version of pytorch ([INSTALLING PREVIOUS VERSIONS OF PYTORCH](https://pytorch.org/get-started/previous-versions/))
+4. Install proper version of pytorch ([INSTALLING PREVIOUS VERSIONS OF PYTORCH](https://pytorch.org/get-started/previous-versions/)) ([Release Compatibility Matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix) - for python version)
     ```shell
     conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
     ```
-5. Check version. `nvcc -V` returns superficial version.
+6. Check version. `nvcc -V` returns superficial version.
     ```shell
     import torch
     print(torch.version.cuda)
@@ -88,4 +88,5 @@ conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=
 python
 import torch
 print(torch.version.cuda)
+print(torch.cuda.is_available())
 ```
