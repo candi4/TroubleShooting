@@ -82,3 +82,11 @@ fi
 
 # ==== End CUDA/cuDNN Version Check ====
 ```
+
+## GPU driver
+For NVIDIA GeForce RTX 5090
+```
+sudo apt remove --purge nvidia*
+sudo apt autoremove
+sudo apt install nvidia-driver-570-open
+```
