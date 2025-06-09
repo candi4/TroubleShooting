@@ -32,3 +32,9 @@ This installs into `/usr/local/include/`.
     cmake ..
     make
     ```
+
+## blinking cursor visible
+```shell
+tput cnorm
+```
+Makes the blinking cursor (caret) visible again.
