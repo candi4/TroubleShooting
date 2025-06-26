@@ -47,7 +47,7 @@ git fetch --prune
 ```
 git rev-parse <branch name>
 git rev-parse HEAD
-git log
+git log # press q to quit
 ```
 
 ## .gitignore
