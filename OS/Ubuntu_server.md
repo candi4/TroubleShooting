@@ -125,7 +125,10 @@ lscpu
   * Total physical cores = `Socket(s)` * `Core(s) per socket` (Parallel process)
 
 
-
+### Check ubuntu version
+```shell
+lsb_release -a
+```
 
 
 
@@ -160,3 +163,10 @@ Examples
     ```shell
     scp [source] username@123.456.789.012:[target]
     ```
+
+### tmux (Editing)
+```shell
+sudo apt install tmux
+```
+* References
+* [[Linux] tmux를 사용해보자](https://velog.io/@piopiop/Linux-tmux%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90)
