@@ -169,7 +169,7 @@ Examples
 sudo apt install tmux
 ```
 ```shell
-tmux --new -s <session_name> # Create a new session
+tmux new -s <session_name> # Create a new session
 tmux ls # List all sessions
 tmux attach -t <session_name> # Attach to a session
 ```
