@@ -60,7 +60,14 @@ __pycache__/
 ### References
 * [GitHub gitignore/Python.gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore)
 
-## Revert pushed commit
+## Mistake of commit
+### Remove last local commit
+Remove last commit but keep changes staged
+```
+git reset --soft HEAD~1
+```
+
+### Revert pushed commit
 * Using command
     ```shell
     git log 
