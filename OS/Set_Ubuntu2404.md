@@ -26,7 +26,7 @@ kr.archive.ubuntu -> mirror.kakao
 	- C++, C++ extension pack. Clang-format
 	- Remote - SSH
 	- indent rainbow
-	- Markdown all in one / markdown pdf
+	- Markdown all in one, markdown pdf
 - Setting
 	- File -> preference -> settings
 		- zoom level
