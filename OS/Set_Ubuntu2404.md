@@ -16,7 +16,7 @@ kr.archive.ubuntu -> mirror.kakao
 ## install Hangul
 - Settings -> system -> region & language
 - Manage installed languages -> install/remove languages -> 'Korean' check -> reboot
-- open terminal -> ibus-setup -> input method -> add -> 'Hangul'
+- open terminal -> ibus-setup -> input method -> add -> 'Korean'- 'Hangul'
 - Settings -> keyboard -> Input sources add 'Korean(Hangul)' -> remove others -> preference of Korean(Hangul) -> Hangul Toggle key 'add'
 
 ## Vscode
