@@ -60,6 +60,10 @@ __pycache__/
 ### References
 * [GitHub gitignore/Python.gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore)
 
+## Changes in working directory
+* `git restore <file>` : discard changes in working directory
+* `git diff <file>` : show changes between working directory and index
+
 ## Mistake of commit
 ### Remove last local commit
 Remove last commit but keep changes staged
