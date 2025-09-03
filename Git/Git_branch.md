@@ -63,6 +63,7 @@ __pycache__/
 ## Changes in working directory
 * `git restore <file>` : discard changes in working directory
 * `git diff <file>` : show changes between working directory and index
+* `git diff HEAD~1 <file>` : show changes between working directory and previous commit
 
 ## Mistake of commit
 ### Remove last local commit
