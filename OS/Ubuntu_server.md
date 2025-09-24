@@ -130,6 +130,11 @@ lscpu
 lsb_release -a
 ```
 
+### Check command line of running processes
+```shell
+pgrep -af "python train.py "
+```
+It shows the process ID and the full command line of all processes matching the pattern "python train.py".
 
 
 
