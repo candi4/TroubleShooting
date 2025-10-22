@@ -80,7 +80,7 @@ python code.py 2>&1 | tee log.txt # Displays and saves output
 ```
 * `2>&1`: include error message
 
-### Kill process
+### Kill python process
 Find the process ID (PID) first, then kill it.
 ```shell
 ps aux | grep python
