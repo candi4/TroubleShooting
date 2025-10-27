@@ -87,3 +87,10 @@ git reset --soft HEAD~1
     4. Push
 ### References
 * [원격저장소에 올라간 git commit 되돌리기](https://simple-ing.tistory.com/60)
+
+## Git Remote Push
+```shell
+git add . # 
+git commit -m "WRITE CHANGES"
+git push origin main #
+```
