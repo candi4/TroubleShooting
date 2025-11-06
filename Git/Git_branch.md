@@ -85,6 +85,13 @@ git reset --soft HEAD~1
     2. Right-click on the commit
     3. Click `Revert`
     4. Push
+
+### Remove commit from remote
+```shell
+git reset --hard HEAD~1
+git push origin main --force
+```
+
 ### References
 * [원격저장소에 올라간 git commit 되돌리기](https://simple-ing.tistory.com/60)
 
