@@ -201,10 +201,15 @@ tmux attach -t <session_name> # Attach to a session
 * `ctrl + b + "` : Split the window horizontally
 * `ctrl + b + arrow key` : Move between panes
 * `ctrl + b + [` : Enter copy mode to scroll through the output (quit with `q`)
+
 * `ctrl + b + :` + `resize-pane -D [size]` : Resize the current pane down
 * `ctrl + b + :` + `resize-pane -U [size]` : Resize the current pane up
 * `ctrl + b + :` + `resize-pane -L [size]` : Resize the current pane left
 * `ctrl + b + :` + `resize-pane -R [size]` : Resize the current pane right
+
+* simultaneously typeing in all panes:
+  * `ctrl + b + :` + `setw synchronize-panes on` : Enable
+  * `ctrl + b + :` + `setw synchronize-panes off` : Disable
 
 * References
 * [[Linux] tmux를 사용해보자](https://velog.io/@piopiop/Linux-tmux%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90)
