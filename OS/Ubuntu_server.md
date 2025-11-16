@@ -158,6 +158,7 @@ find . -name "config.py"
 ### Memory usage
 ```shell
 sudo du -sh /home/* | sort -rh # Check disk usage per user
+sudo du -sh /home/someuser # Check disk usage of a specific user
 df -h # Check disk usage per drive
 ```
 
