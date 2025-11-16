@@ -155,6 +155,11 @@ It shows the process ID and the full command line of all processes matching the 
 find . -name "config.py"
 ```
 
+### Memory usage
+```shell
+sudo du -sh /home/* | sort -rh # Check disk usage per user
+df -h # Check disk usage per drive
+```
 
 
 
