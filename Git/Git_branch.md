@@ -99,7 +99,7 @@ git reset --soft HEAD~1
 ### Remove commit from remote
 ```shell
 git reset --hard HEAD~1
-git push origin main --force
+git push origin <branch> --force
 ```
 
 ### References
