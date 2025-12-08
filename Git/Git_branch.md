@@ -43,6 +43,16 @@ git branch
 git fetch --prune
 ```
 
+## Remove gone branches 
+Remove local branches whose remote branches are deleted.
+```shell
+git fetch --prune
+git branch -vv
+git branch -vv | awk '/: gone]/{print $1}' | xargs -r git branch -d
+```
+
+
+
 ## Get the commit id (branch hash)
 ```
 git rev-parse <branch name>
