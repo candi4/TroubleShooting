@@ -82,7 +82,7 @@ Remove last commit but keep changes staged
 git reset --soft HEAD~1
 ```
 
-### Revert pushed commit
+### Revert pushed commit (Remain history)
 * Using command
     ```shell
     git log 
