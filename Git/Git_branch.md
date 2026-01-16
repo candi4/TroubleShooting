@@ -111,3 +111,12 @@ git add . #
 git commit -m "WRITE CHANGES"
 git push origin main #
 ```
+
+## Publish empty branch (Orphan branch)
+Orphan branch which doesn't share history at all
+```shell
+git checkout --orphan <새-브랜치-이름>
+git rm -rf .
+git commit --allow-empty -m "Root empty commit"
+git push origin <새-브랜치-이름>
+```
