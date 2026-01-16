@@ -115,8 +115,20 @@ git push origin main #
 ## Publish empty branch (Orphan branch)
 Orphan branch which doesn't share history at all
 ```shell
-git checkout --orphan <새-브랜치-이름>
+git checkout --orphan <new-branch-name>
 git rm -rf .
 git commit --allow-empty -m "Root empty commit"
-git push origin <새-브랜치-이름>
+git push origin <new-branch-name>
+```
+
+## After changing default branch
+```shell
+# 1. Rename the local branch to the new name (e.g., master -> main)
+git branch -m master main
+# 2. Fetch the latest updates from the remote repository
+git fetch origin
+# 3. Set the local branch to track the new remote main branch
+git branch -u origin/main main
+# 4. Update the remote repository's default branch pointer (HEAD)
+git remote set-head origin -a
 ```
