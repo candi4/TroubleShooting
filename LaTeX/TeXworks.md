@@ -14,6 +14,13 @@
 2. Run `pdfLaTeX`
 3. Run `BibTex`
 4. Run `pdfLaTeX` twice
+* You can run in terminal
+    ```shell
+    pdflatex test.tex
+    bibtex test.aux
+    pdflatex test.tex
+    pdflatex test.tex
+    ```
 
 ## Save difference between two tex files as PDF
 Try `latexdiff --version`. If `latexdiff` is not installed, install it.
