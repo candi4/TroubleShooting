@@ -213,6 +213,8 @@ tmux attach -t <session_name> # Attach to a session
 * `ctrl + b + :` + `resize-pane -L [size]` : Resize the current pane left
 * `ctrl + b + :` + `resize-pane -R [size]` : Resize the current pane right
 
+* `ctrl + b + space` : Rearrange panes
+
 * simultaneously typeing in all panes:
   * `ctrl + b + :` + `setw synchronize-panes on` : Enable
   * `ctrl + b + :` + `setw synchronize-panes off` : Disable
