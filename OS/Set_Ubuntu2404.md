@@ -19,6 +19,12 @@ kr.archive.ubuntu -> mirror.kakao
 - open terminal -> ibus-setup -> input method -> add -> 'Korean'- 'Hangul'
 - Settings -> keyboard -> Input sources add 'Korean(Hangul)' -> remove others -> preference of Korean(Hangul) -> Hangul Toggle key 'add'
 
+### Off/On ibus
+```
+ibus exit
+ibus-daemon -drx
+```
+
 ## Vscode
 - Install vscode
 - Extension
