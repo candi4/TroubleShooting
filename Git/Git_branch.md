@@ -71,7 +71,7 @@ __pycache__/
 * [GitHub gitignore/Python.gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore)
 
 ## Changes in working directory
-* `git restore <file>` : discard changes in working directory
+* `git restore <file/directory>` : discard changes in working directory
 * `git diff <file>` : show changes between working directory and index
 * `git diff HEAD~1 <file>` : show changes between working directory and previous commit
 
