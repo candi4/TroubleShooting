@@ -223,3 +223,9 @@ tmux attach -t <session_name> # Attach to a session
 * References
 * [[Linux] tmux를 사용해보자](https://velog.io/@piopiop/Linux-tmux%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90)
 * [Tmux (Terminal multiplexer) 사용법](https://m.blog.naver.com/PostView.naver?blogId=songsite123&logNo=223809804101&navType=by) (Detail)
+
+#### Save tmux pane output to file
+```
+tmux capture-pane -p -S -3000 > myfile.txt
+```
+* `-S -3000`: starts from 3000 lines above the current screen
