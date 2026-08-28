@@ -102,6 +102,15 @@ git reset --hard HEAD~1
 git push origin <branch> --force
 ```
 
+### Change last commit
+Modify the most recent commit message or add staged changes to the last commit. 
+```
+git commit --amend -m "My message"
+git push --force-with-lease origin master
+```
+* `git commit --amend`: replace the last local commit
+* `--force-with-lease`: safely push the changed commit hash to remote
+
 ### References
 * [원격저장소에 올라간 git commit 되돌리기](https://simple-ing.tistory.com/60)
 
