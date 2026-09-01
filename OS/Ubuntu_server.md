@@ -230,3 +230,91 @@ mkdir -p .terminal_logs
 tmux capture-pane -p -S -3000 > ".terminal_logs/tmux_$(date +%Y%m%d_%H%M%S).log"
 ```
 * `-S -3000`: starts from 3000 lines above the current screen
+
+
+## Visualize simulation in server
+Remote GUI execution with VNC
+### One-time setup
+
+Run these commands on the server only once.
+
+1. Configure `DISPLAY=:0` automatically for every SSH login.
+
+```
+echo 'export DISPLAY=:0' >> ~/.bashrc
+```
+
+2. Register `x11vnc` as a systemd service so it always runs in the background.
+
+```
+sudo tee /etc/systemd/system/x11vnc.service > /dev/null <<'EOF'
+[Unit]
+Description=x11vnc
+After=lightdm.service
+
+[Service]
+ExecStart=/usr/bin/x11vnc -display :0 -auth /var/run/lightdm/root/:0 -forever -shared -rfbport 5901 -localhost
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable --now x11vnc
+```
+
+After this one-time setup is complete, repeat only the regular run procedure below.
+
+### Regular run procedure
+
+Download VNC Viewer from [TigerVNC](https://tigervnc.org/).
+
+1. Open the SSH tunnel and connect with VNC. Skip this step if the tunnel is already open.
+
+```
+ssh -L 5901:localhost:5901 xxx@143.248.157.154
+```
+
+Keep this terminal open. Then open VNC Viewer and connect to:
+
+```
+localhost:5901
+```
+
+2. SSH into the server from another terminal. `-X` is not required.
+
+```
+ssh xxx@143.248.157.154
+```
+
+3. Activate the environment and run the script.
+
+```
+conda activate xxx
+cd /home/luong/limx_rl/isaacgym/python/examples
+python3 1080_balls_of_solitude.py
+```
+
+Because `DISPLAY=:0` is already configured in `~/.bashrc`, you do not need to enter it manually.
+
+4. Check the result in the VNC Viewer window opened in step 1.
+
+5. Stop the script with `Ctrl+C` in the terminal running the script. The tunnel and VNC Viewer can stay open for next time.
+
+Summary: open the VNC connection once per day, then repeat only `ssh`, `conda activate xxx`, and `python3 script.py`.
+
+### Troubleshooting
+#### If simulation screen doesn't appear in vncviewer
+1. Restart server GUI log-in
+```
+# In server
+sudo systemctl restart display-manager
+```
+2. Access `localhost:5901`
+3. Select `Xfce Session` then log in
+4. Resize server resolution
+```
+# In server
+DISPLAY=:0 xrandr --fb 1920x1080
+```
+5. Run play code
