@@ -1,6 +1,6 @@
 # Set_Ubuntu
 
-## Install Hangul
+## Install Hangul 한글
 1. `sudo apt update` 
 2. `sudo apt install ibus-hangul -y` 
 3. Reboot.
