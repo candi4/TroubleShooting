@@ -226,6 +226,7 @@ tmux attach -t <session_name> # Attach to a session
 
 #### Save tmux pane output to file
 ```
-tmux capture-pane -p -S -3000 > myfile.txt
+mkdir -p .terminal_logs
+tmux capture-pane -p -S -3000 > ".terminal_logs/tmux_$(date +%Y%m%d_%H%M%S).log"
 ```
 * `-S -3000`: starts from 3000 lines above the current screen
