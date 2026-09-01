@@ -4,7 +4,7 @@ How to use GitHub login for Git commands.
 ## GitHub CLI
 ### Install GitHub CLI
 ```shell
-conda install -c conda-forge gh
+conda install -c conda-forge gh -y
 ```
 Check installation:
 ```shell
