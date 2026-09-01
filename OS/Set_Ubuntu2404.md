@@ -13,7 +13,7 @@ sudo gedit /etc/apt/sources.list
 kr.archive.ubuntu -> mirror.kakao    
 (not security)
 
-## install Hangul
+## install Hangul 한글
 - Settings -> system -> region & language
 - Manage installed languages -> install/remove languages -> 'Korean' check -> reboot
 - open terminal -> ibus-setup -> input method -> add -> 'Korean'- 'Hangul'
