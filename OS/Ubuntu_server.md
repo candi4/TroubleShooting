@@ -194,7 +194,7 @@ Examples
     scp [source] username@123.456.789.012:[target]
     ```
 
-### tmux (Editing)
+### tmux
 ```shell
 sudo apt install tmux
 ```
@@ -206,6 +206,7 @@ tmux attach -t <session_name> # Attach to a session
 * `ctrl + b`, `%` : Split the window vertically
 * `ctrl + b`, `"` : Split the window horizontally
 * `ctrl + b`, `arrow key` : Move between panes
+* `ctrl + b`, `{` : Swap the current pane with the previous pane
 * `ctrl + b`, `[` : Enter copy mode to scroll through the output (quit with `q`)
 * `ctrl + b`, `d` : Detach from the current tmux session while keeping it running in the background
 
