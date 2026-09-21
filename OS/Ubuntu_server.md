@@ -231,6 +231,13 @@ mkdir -p .terminal_logs && tmux capture-pane -p -S -3000 > ".terminal_logs/tmux_
 ```
 * `-S -3000`: starts from 3000 lines above the current screen
 
+#### Check current tmux session/window/pane
+```
+tmux display-message -p '#S:#I.#P'
+```
+* `#S`: current session name
+* `#I`: current window number
+* `#P`: current pane number
 
 ## Visualize simulation in server
 Remote GUI execution with VNC
