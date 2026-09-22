@@ -75,8 +75,9 @@ unzip compressed.zip
 ### Save output to file
 These aren't compatible with tqdm in python. Refer to `taceback` module of python.
 ```shell
-python code.py > log.txt 2>&1 # Saves output without displaying
-python code.py 2>&1 | tee log.txt # Displays and saves output
+mkdir -p .terminal_logs && python code.py > ".terminal_logs/tmux_$(date +%Y%m%d_%H%M%S).log" 2>&1 # Saves output without displaying
+mkdir -p .terminal_logs && python code.py 2>&1 | tee ".terminal_logs/tmux_$(date +%Y%m%d_%H%M%S).log" # Displays and saves output
+
 ```
 * `2>&1`: include error message
 
