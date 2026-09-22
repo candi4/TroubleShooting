@@ -111,6 +111,17 @@ git push --force-with-lease origin master
 * `git commit --amend`: replace the last local commit
 * `--force-with-lease`: safely push the changed commit hash to remote
 
+### Push a local branch to a different remote branch
+Move remote `master` branch to the place of local`revised` branch.
+Update remote `master` branch to match local `revised` branch.
+```shell
+git push --force-with-lease origin revised:master
+```
+* `revised`: local branch to push
+* `master`: remote branch to update
+* `revised:master`: push local `revised` into remote `master`
+* `--force-with-lease`: safer force push. It fails if remote `master` was changed by someone else
+
 ### References
 * [원격저장소에 올라간 git commit 되돌리기](https://simple-ing.tistory.com/60)
 
