@@ -35,6 +35,15 @@ gh auth setup-git
 ```
 This makes `git push`, `git pull`, and `git clone` use the GitHub login saved by `gh`.
 
+### Use a different account for one repository
+For an HTTPS remote, set the username locally and push with a personal access token (PAT):
+```shell
+git config --local credential.useHttpPath true
+git config --local credential.username "dedicated-github-username"
+git push
+```
+Enter the dedicated account's PAT when prompted for a password. Git looks up credentials by repository path, and the `gh` login remains unchanged.
+
 ### Check status
 ```shell
 gh auth status
